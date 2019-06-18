@@ -49,7 +49,6 @@ public class GM : MonoBehaviour {
         GlobalVariables.gameOver = false;
         GlobalVariables.win = false;
         GlobalVariables.score = 0;
-        GlobalVariables.bossHPBar_totalW = bossHPBar.sizeDelta.x;
         currentScene = SceneManager.GetActiveScene();
         LvName.text = currentScene.name;
         Score.text = GlobalVariables.score.ToString();
@@ -74,7 +73,11 @@ public class GM : MonoBehaviour {
             }
             if (bossHP != GlobalVariables.bossHP) {
                 bossHP = GlobalVariables.bossHP;
-                bossHPBar.sizeDelta = new Vector2(bossHP / bossTotalHP * GlobalVariables.bossHPBar_totalW, bossHPBar.sizeDelta.y);
+                print(bossHP);
+                print(bossTotalHP);
+                print(GlobalVariables.bossHPBar_totalW);
+                print(bossHP / bossTotalHP * GlobalVariables.bossHPBar_totalW);
+                bossHPBar.sizeDelta = new Vector2(bossHP / bossTotalHP * GlobalVariables.bossHPBar_totalW, 35);
             }
             if (recordedUltimateTimes != GlobalVariables.ultimateTimes) {
                 recordedUltimateTimes = GlobalVariables.ultimateTimes;

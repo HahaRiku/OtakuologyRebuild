@@ -3639,7 +3639,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5C11\u5973\u6B4C\u5287"
+  m_Text: Module
 --- !u!222 &2054949323
 CanvasRenderer:
   m_ObjectHideFlags: 0
