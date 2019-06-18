@@ -13,7 +13,6 @@ public class EachNodeMovingControl : MonoBehaviour {
     private RectTransform objRT;
     private Image img;
     private RectTransform parentRT;
-    private BoxCollider2D coll;
 
     void Start() {
 
@@ -51,8 +50,6 @@ public class EachNodeMovingControl : MonoBehaviour {
         else {
             objRT.sizeDelta = new Vector2(size_pixel, size_pixel);
         }
-        coll = gameObject.GetComponent<BoxCollider2D>();
-        coll.size = new Vector2(s_p, s_p);
         direction = d;
         speed = s;
         img.sprite = sprite;
@@ -63,6 +60,7 @@ public class EachNodeMovingControl : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D coll) {
+		Debug.Log(coll.gameObject.name);
         if (coll.name == "Player") {
             GlobalVariables.playerHP -= 1;
             GlobalVariables.DeleteDanmuElement(gameObject);
