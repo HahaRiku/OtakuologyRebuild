@@ -8,7 +8,7 @@ public static class GlobalVariables {
     public const float wholeGameY = 600;
     public const float gameWinX = 425;
     public const float gameWinY = 500;
-    public static float bossHPBar_totalW = 180;
+    public const float bossHPBar_totalW = 180;
 
     public static int playerHP = 5;
     public static float bossHP = 100;
